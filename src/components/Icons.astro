@@ -1,0 +1,36 @@
+---
+// import Menu from "./icons/menu.astro"
+import Menu  from  "./icons/Menu.astro"
+import Copyright from "./icons/Copyright.astro"
+import House from "./icons/House.astro"
+import Shops from "./icons/Shops.astro"
+import Buildings from "./icons/Buildings.astro"
+import WhatsApp from "./icons/WhatsApp.astro"
+import Facebook from "./icons/Facebook.astro"
+import Mail from "./icons/Mail.astro"
+import Phone from "./icons/Phone.astro"
+import Instagram from "./icons/Instagram.astro"
+import LinkedIn from "./icons/LinkedIn.astro"
+import Twitter from "./icons/Twitter.astro"
+
+
+const iconsMap = {
+  menu : Menu,
+  copy: Copyright,
+  house: House,
+  shops: Shops,
+  buildings: Buildings,
+  facebook: Facebook,
+  whatsapp: WhatsApp,
+  email: Mail,
+  phone: Phone,
+  instagram: Instagram,
+  linkedIn: LinkedIn,
+  twitter: Twitter
+}
+
+const Icon = iconsMap[Astro.props.name]
+---
+
+
+<Icon />

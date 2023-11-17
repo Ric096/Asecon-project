@@ -1,0 +1,97 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		<ViewTransitions />
+	</head>
+	<body>
+		<Header />
+		<slot />
+		<Footer />
+
+		<style is:global>
+			/* width */
+			::-webkit-scrollbar {
+				width: 14px;
+			}
+
+
+			/* Track */
+			::-webkit-scrollbar-track {
+				background: #f1f1f1;
+			}
+
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+				background: #888;
+			}
+
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
+			:root {
+				--downriver-50: #e9f8ff;
+				--downriver-100: #ceefff;
+				--downriver-200: #a7e5ff;
+				--downriver-300: #6bd9ff;
+				--downriver-400: #26bfff;
+				--downriver-500: #0097ff;
+				--downriver-600: #006dff;
+				--downriver-700: #0052ff;
+				--downriver-800: #0045e6;
+				--downriver-900: #0040b3;
+				--downriver-950: #001d4d;
+				--light-dark: rgb(48, 48, 48);
+				--light-dark-2: rgb(31, 30, 30);
+				--white-color: #eff4fa;
+			}
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			html {
+				font-family: system-ui, sans-serif;
+				background-color: rgb(44, 44, 44);
+				background-size: 224px;
+				scroll-behavior: smooth;
+			}
+			body {
+				background-color: var(--white-color);
+				width: 1200px;
+				margin: 0 auto;
+				/* padding-bottom: 2px; */
+			}
+
+			.second-title {
+				background-color: var(--light-dark-2);
+				color: rgb(231, 230, 230);
+				height: 300px;
+				font-size: 40px;
+				font-weight: 400;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</body>
+</html>

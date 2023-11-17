@@ -1,0 +1,68 @@
+---
+import Icon from "../components/Icons.astro";
+---
+
+<section class="contact-info">
+  <p>Saturio Ríos c/ De La Paz</p>
+
+  <div class="number-container">
+    <span><Icon name="phone" /></span>
+    <p>(0981)109-195</p>
+  </div>
+
+  <div class="number-container">
+    <span><Icon name="phone" /></span>
+    <p>(0981)434-773</p>
+  </div>
+
+  <p>info@asecon.com</p>
+
+  <ul class="social-media">
+    <li><Icon name="instagram" /></li>
+    <li><Icon name="facebook" /></li>
+    <li><Icon name="linkedIn" /></li>
+    <li><Icon name="twitter" /></li>
+  </ul>
+</section>
+
+<style>
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    color: var(--light-dark-2);
+
+    font-size: 24px;
+    font-weight: 400;
+    gap: 12px;
+    align-items: flex-end;
+  }
+
+  .number-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  span {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-media {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .social-media li {
+    list-style: none;
+    cursor: pointer;
+    transition: scale 300ms;
+  }
+
+  li:hover {
+    scale:1.2
+  }
+
+</style>

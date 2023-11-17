@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icons.astro"
+import ContactInfo from "../components/ContactInfo.astro";
+
+
+---
+
+<Layout title="Contactanos">
+  <section class="contact-section">
+    <h2>Contactanos</h2>
+
+    <section class="form-section">
+
+      <!-- <img class="image" src="/post-it.png" alt="Imagenes de contacto" /> -->
+
+      <ContactInfo />
+
+      <form action="post">
+        <input type="text" placeholder="Nombre y Apellido" />
+        <input type="email" placeholder="Ingrese su correo electrónico" />
+        <input type="number" placeholder="Número de telefono">
+        <label>Motivo de Consulta:
+          <select name="consult">
+            <option value="no-info">-</option>
+            <option value="d-p">Digitalización de planos</option>
+            <option value="as">Asesoramiento</option>
+            <option value="c-p">Creación de planos</option>
+            <option value="m-s">Mas información</option>
+            <option value="otro">Otros</option>
+          </select>
+        </label>
+        <textarea placeholder="Mensaje..."></textarea>
+        <input type="submit" value="Enviar">
+      </form>
+
+    </section>
+
+  </section>
+</Layout>
+
+<style>
+  .contact-section {
+    text-align: center;
+    /* padding: 20px; */
+    background-color: var(--white-color);
+    color: var(--light-dark-2);
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 400;
+    padding: 60px;
+    color: var(--white-color);
+    background-color: var(--light-dark-2);
+
+  }
+
+  .btn-whatsapp {
+    width: 250px;
+    background-color: var(--downriver-600);
+    color: white;
+    padding: 18px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 0 auto;
+    opacity: 0.8;
+    transition: opacity 300ms;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-whatsapp:hover {
+    opacity: 1;
+    color: white;
+    background-color: vat(--downriver-700);
+  }
+
+  .form-section {
+    display: flex;
+    padding: 70px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--white-color);
+    width: 100%;
+    /* height: 100vh; */
+  }
+
+  .image {
+    width: 400px;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid var(--downriver-800);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  input, textarea{
+    /* display: block; */
+    width: 400px;
+    height: auto;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--downriver-600);
+    /* color: white; */
+
+    /* background-color: var(--downriver-200); */
+  }
+
+  label {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  select, option {
+    width: 254px;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--downriver-600);
+
+  }
+
+  input:focus, 
+  select:focus, 
+  textarea:focus {
+    outline: none;
+    border: 1px solid var(--downriver-400);
+    box-shadow: 0px 0px 3px 1px var(--downriver-400);  
+  }
+
+  input[type="submit"] {
+    width:100px;
+    margin:0 auto;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    color: var(--light-dark-2);
+    transition: background-color 300ms;
+  }
+
+  input[type="submit"]:hover {
+    color: white;
+    border: 1px solid var(--downriver-900);
+    background-color: var(--downriver-600)
+  }
+
+
+</style>

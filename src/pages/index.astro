@@ -1,0 +1,217 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icons.astro";
+import MoreInfo from "../components/MoreInfo.astro";
+import AboutUs from "../components/AboutUs.astro";
+import YourFuture from "../components/AboutUs.astro";
+---
+
+<Layout title="Asecon Construcciones">
+	<main>
+		<section class="main-header">
+			<h2 class="slogan">Tu visión,</h2>
+			<h2 class="second-slogan">Nuestra creación</h2>
+		</section>
+
+		<article class="title-article">
+			<h1 class="main-title">ASECON S.A.</h1>
+			<p>Soluciones Arquitectónicas.</p>
+		</article>
+
+		<YourFuture />
+
+		<section class="about">
+			<article class="article1">
+				<div>
+					<h2>Contamos con más de <span> 10 años</span> en el mercado</h2>
+					<p>Mejorando la calidad de vida de nuestros clientes</p>
+				</div>
+				<a class="btn-contact" href="/contact">Contáctanos</a>
+			</article>
+
+			<article class="article2">
+				<h3>
+					Confía en nosotros para materializar tus sueños e iniciar el camino
+					hacia un hogar o espacio comercial que refelejen tu estilo
+				</h3>
+
+				<ul>
+					<li>
+						<Icon name="house" />
+						 Casas
+					</li>
+					<li>
+						<Icon name="shops" />
+						 Negocios
+					</li>
+					<li>
+						<Icon name="buildings" />
+						 Edificios
+					</li>
+				</ul>
+			</article>
+		</section>
+
+		<MoreInfo />
+	</main>
+</Layout>
+
+<style>
+	h1 {
+		color: var(--white-color);
+		font-size: 40px;
+		font-weight: 400;
+		margin-left: 50px;
+
+	}
+
+	.title-article {
+		background-color: var(--light-dark-2);
+		/* padding: 100px; */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: left;
+		height: 300px;
+	}
+
+	.title-article p {
+		margin: 0 0 0 100px;
+		line-height: 0.5;
+		color: var(--downriver-300);
+	}
+
+	span {
+		color: var(--downriver-900);
+		font-weight: 600;
+		text-decoration: underline;
+	}
+
+	.main-header {
+		padding-top: 20px;
+		width: 100%;
+		background-image: linear-gradient(
+				rgba(140, 140, 255, 0.7),
+				rgba(0, 0, 0, 0.7)
+			),
+			url(https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=1200);
+		background-position: center;
+		height: 100vh;
+		object-fit: cover;
+		aspect-ratio: 3/2;
+	}
+
+	.slogan,
+	.second-slogan {
+		font-weight: 400;
+		text-align: left;
+		font-style: italic;
+		text-transform: uppercase;
+		font-size: 56px;
+		color: var(--white-color);
+		padding-top: 180px;
+		margin: 0 0 0 50px;
+	}
+
+	.second-slogan {
+		padding-top: 0;
+		margin-left: 150px;
+		line-height: 0.8;
+		color: var(--downriver-300);
+	}
+
+	.about {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+
+		height: 400px;
+		/* padding: 80px 0; */
+		/* margin: 80px 0; */
+
+		background-color: var(--white-color);
+		margin-bottom: 20px;
+	}
+	.article1,
+	.article2 {
+		border: 1px solid black;
+		border-radius: 4px;
+
+		text-align: left;
+		margin: 60px 50px; 
+		padding: 20px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.article1 {
+		border: none;
+	}
+
+	.article1 h2 {
+		font-weight: 600;
+	}
+
+	.article1 p {
+		font-size: 20px;
+		color: var(--light-dark-2);
+		font-weight: 500;
+		margin-top: 16px;
+	}
+
+	.btn-contact {
+		width: 140px;
+		height: auto;
+		padding: 12px;
+		border: 2px solid var(--downriver-900);
+		text-align: center;
+		text-decoration: none;
+		color: var(--downriver-900);
+		margin-bottom: 16px;
+		font-weight: 500;
+		border-radius: 8px;
+	}
+
+	.btn-contact:hover {
+		border: 2px solid var(--downriver-900);
+		color: white;
+		background-color: var(--downriver-600);
+	}
+
+	.article2 h3 {
+		font-size: 24px;
+		font-weight: 400;
+		margin-top: 10px;
+	}
+
+	.article2 ul {
+		margin-bottom: 16px;
+	}
+
+	ul {
+		display: flex;
+		margin: 0 auto;
+		width: 400px;
+		/* border:1px solid black; */
+		border-radius: 4px;
+		justify-content: space-evenly;
+		padding: 10px;
+	}
+
+	li {
+		display: flex;
+		flex-direction: column;
+		font-size: 20px;
+		list-style: none;
+		align-items: center;
+		color: var(--downriver-900);
+		transition: scale 300ms;
+	}
+
+	li:hover {
+		scale: 1.1;
+		color: var(--downriver-950);
+	}
+</style>
